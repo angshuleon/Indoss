@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Vite build output
+dist/
+build/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+*.env
+*.key
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+
+# VSCode
+.vscode/

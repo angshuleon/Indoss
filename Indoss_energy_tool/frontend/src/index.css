@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Montserrat for body text */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Indoss brand tokens */
+:root {
+  --indoss-ink:   #232323;
+  --indoss-accent:#F6921E;
+  --indoss-teal:  #0A3F40;
+  --indoss-aqua:  #8DB1B2;
+  --indoss-sand:  #EFDCA2;
+  --indoss-mist:  #F6F7F7;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background-color: var(--indoss-mist);
+  color: var(--indoss-ink);
+}
+
+/* Caslon-style display font for headings (if available on system/Adobe fonts) */
+.font-display {
+  font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+}
+
+/* Make sliders match Indoss accent */
+input[type="range"] {
+  accent-color: var(--indoss-accent);
+}
