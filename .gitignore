@@ -23,3 +23,11 @@ __pycache__/
 
 # VSCode
 .vscode/
+
+# Docker runtime artifacts (not the config files!)
+.docker/
+docker-compose.override.yml
+
+# React Router cache
+.react-router/
+.wrangler/
