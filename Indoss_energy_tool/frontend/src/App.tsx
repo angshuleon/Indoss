@@ -202,6 +202,7 @@ function SolarToolApp() {
   if (result === null) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F6F7F7]">
+    
       <div className="text-sm text-[#232323]/70">
         {loading ? "Calculating your solar benefits..." : "Waiting for backend..."}
       </div>
