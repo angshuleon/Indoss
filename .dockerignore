@@ -1,0 +1,55 @@
+# Git
+.git
+.gitignore
+
+# Node modules
+**/node_modules
+**/npm-debug.log
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/venv
+**/.pytest_cache
+**/.python-version
+
+# Build outputs
+**/build
+**/dist
+**/.next
+**/.react-router
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Logs
+**/logs
+**/*.log
+
+# Cache
+**/.cache
+**/.parcel-cache
+
+# Wrangler
+**/.wrangler
+
+# Test coverage
+**/coverage
+
+# Misc
+nul

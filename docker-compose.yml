@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # Backend API for Indoss Energy Tool
+  energy-tool-backend:
+    build:
+      context: ./Indoss_energy_tool/backend
+      dockerfile: Dockerfile
+    container_name: indoss-energy-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./Indoss_energy_tool/backend:/app
+      - /app/venv
+    restart: unless-stopped
+    networks:
+      - indoss-network
+
+  # Frontend for Indoss Energy Tool
+  energy-tool-frontend:
+    build:
+      context: ./Indoss_energy_tool/frontend
+      dockerfile: Dockerfile
+    container_name: indoss-energy-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    volumes:
+      - ./Indoss_energy_tool/frontend:/app
+      - /app/node_modules
+    depends_on:
+      - energy-tool-backend
+    restart: unless-stopped
+    networks:
+      - indoss-network
+
+  # Indoss Website
+  indoss-website:
+    build:
+      context: ./Indoss_website
+      dockerfile: Dockerfile
+    container_name: indoss-website
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Indoss_website:/app
+      - /app/node_modules
+    restart: unless-stopped
+    networks:
+      - indoss-network
+
+networks:
+  indoss-network:
+    driver: bridge

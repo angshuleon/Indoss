@@ -36,7 +36,7 @@ export default function AboutPage() {
     },
   ];
 
-  return (
+    return (
     <div className="relative overflow-hidden">
       {/* background accent */}
       <div className="pointer-events-none absolute -top-32 right-[-6rem] h-80 w-80 rounded-full bg-gradient-to-br from-indoss-aqua/60 to-indoss-orange/70 blur-[140px]" />
