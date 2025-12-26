@@ -93,8 +93,8 @@ python-dateutil==2.9.0.post0
 python-http-client==3.3.7
 python-json-logger==4.0.0
 pytz==2025.2
-pywin32==308
-pywinpty==3.0.2
+pywin32==308; platform_system=="Windows"
+pywinpty==3.0.2; platform_system=="Windows"
 PyYAML==6.0.3
 pyzmq==26.2.1
 referencing==0.37.0

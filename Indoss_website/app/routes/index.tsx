@@ -1,3 +1,6 @@
+import ParallaxHeader from "../components/ParallaxHeader";
+import solarHeader from "../assets/solar_roof.jpg"
+
 export default function HomePage() {
   return (
     <div className="relative overflow-hidden">
@@ -5,19 +8,44 @@ export default function HomePage() {
       <div className="pointer-events-none absolute -top-40 -left-32 h-80 w-80 rounded-full bg-gradient-to-br from-indoss-orange/60 to-indoss-aqua/60 blur-[140px]" />
       <div className="pointer-events-none absolute -bottom-40 right-0 h-96 w-96 rounded-full bg-gradient-to-br from-indoss-teal/60 to-indigo-900/60 blur-[150px]" />
 
+      <div>
+      <ParallaxHeader src={solarHeader} alt="Solar power system">
+        <div className="section h-full flex items-end pb-10">
+          <div>
+            <p className="text-white/80 text-xs tracking-[0.25em] uppercase">
+              Solar EPC · Microgrids · EV ready
+            </p>
+            <h1 className="mt-2 text-white text-3xl md:text-5xl font-semibold max-w-2xl">
+              Sustainable Energy systems built for Assam
+            </h1>
+          </div>
+        </div>
+      </ParallaxHeader>
+      </div>
+
+      {/* rest of your page */}
+    
+
+      {/* Optional overlay
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent" />
+    </section> */}
+
+
       {/* HERO */}
-      <section className="section pt-12 pb-16 lg:pt-20 lg:pb-24 relative">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr,1fr] items-center">
+      <section className="section pt-6 pb-10 lg:pt-8 lg:pb-12 relative">
+      <div className="grid gap-8 lg:gap-10 lg:grid-cols-[1.35fr,1fr] items-center">
+
           {/* left */}
-          <div className="space-y-7 animate-fade-up">
-            <span className="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-indoss-charcoal/70 shadow-soft border border-white/80">
+          <div className="space-y-5 animate-fade-up">
+            
+            {/* <span className="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-indoss-charcoal/70 shadow-soft border border-white/80">
               Renewable energy from Assam · Solar · Microgrids · EV-ready
             </span>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-indoss-charcoal">
               Building the <span className="text-gradient">next signal</span> in
               renewable energy.
-            </h1>
+            </h1> */}
 
             <p className="text-sm sm:text-base text-indoss-charcoal/80 max-w-xl">
               Indoss Energy LLP is a renewable energy company rooted in Assam,

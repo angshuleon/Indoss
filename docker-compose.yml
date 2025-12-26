@@ -45,9 +45,6 @@ services:
     container_name: indoss-website
     ports:
       - "3000:3000"
-    volumes:
-      - ./Indoss_website:/app
-      - /app/node_modules
     restart: unless-stopped
     networks:
       - indoss-network

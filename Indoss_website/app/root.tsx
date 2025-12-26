@@ -1,6 +1,7 @@
 import "./app.css";
 import { NavLink, Outlet } from "react-router";
 import { useState } from "react";
+import indossLogo from "./assets/indoss_logo_full.png"
 
 // function Navbar() {
 //   const baseLink =
@@ -113,23 +114,26 @@ function Navbar() {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-white/70 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-white/70 bg-white/90 backdrop-blur">
       {/* top bar */}
-      <nav className="section py-3 flex items-center justify-between gap-6">
+      <nav className="section flex min-h-[76px] items-center justify-between gap-6">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-3 group">
-          <div className="h-9 w-9 rounded-3xl bg-gradient-to-br from-indoss-orange to-indoss-teal shadow-glow flex items-center justify-center text-xs font-bold text-white">
-            I
-          </div>
-          <div className="leading-tight">
-            <div className="tracking-[0.18em] text-xs font-semibold text-indoss-charcoal/80">
+          <img
+            src={indossLogo}
+            alt="Indoss Energy"
+            className="h-16 w-auto select-none"
+          />
+          {/* <div className="leading-tight">
+            <div className="tracking-[0.22em] text-sm font-semibold text-indoss-charcoal/65">
               INDOSS
             </div>
             <div className="text-[11px] text-indoss-charcoal/60 group-hover:text-indoss-charcoal/90">
               Energy LLP · Assam, India
             </div>
-          </div>
+          </div> */}
         </NavLink>
+
 
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-7">
@@ -193,7 +197,7 @@ function Navbar() {
             Plan a solar project
           </NavLink>
 
-          <a
+          {/* <a
             // href="http://localhost:5174"
             href  ="https://growing-lemon-able-being.trycloudflare.com"
             target="_blank"
@@ -201,7 +205,7 @@ function Navbar() {
             className="inline-flex items-center gap-2 rounded-full border border-indoss-orange px-4 py-2 text-xs font-semibold text-indoss-orange bg-white hover:bg-indoss-orange hover:text-white shadow-soft hover:shadow-glow transition-all"
           >
             Estimate your solar potential
-          </a>
+          </a> */}
         </div>
 
         {/* Mobile menu button */}
@@ -300,7 +304,7 @@ function Navbar() {
               >
                 Plan a solar project
               </NavLink>
-              <a
+              {/* <a
                 // href="http://localhost:5174"
                 href = "https://growing-lemon-able-being.trycloudflare.com"
                 target="_blank"
@@ -308,8 +312,8 @@ function Navbar() {
                 onClick={closeMobile}
                 className="inline-flex items-center justify-center rounded-full border border-indoss-orange px-4 py-2 text-xs font-semibold text-indoss-orange bg-white hover:bg-indoss-orange hover:text-white shadow-soft hover:shadow-glow transition-all"
               >
-                Estimate your solar potential
-              </a>
+                Estimate your solar potential */}
+              {/* </a> */}
             </div>
           </div>
         </div>

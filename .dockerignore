@@ -16,10 +16,10 @@
 **/.python-version
 
 # Build outputs
-**/build
-**/dist
+# **/build
+# **/dist
 **/.next
-**/.react-router
+# **/.react-router
 
 # IDE
 .vscode
