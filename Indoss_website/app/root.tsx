@@ -1,7 +1,13 @@
+import type { LinksFunction } from "react-router";
 import "./app.css";
 import { NavLink, Outlet } from "react-router";
 import { useState } from "react";
-import indossLogo from "./assets/indoss_logo_full.png"
+import indossLogo from "./assets/indoss_logo_full.png";
+import appStylesHref from "./app.css?url";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: appStylesHref },
+];
 
 // function Navbar() {
 //   const baseLink =
