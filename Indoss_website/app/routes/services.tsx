@@ -187,6 +187,42 @@ export default function ServicesPage() {
             institutions, boards and funding agencies have clear visibility.
           </p>
         </div>
+
+        {/* Cleaning Service CTA */}
+        <div className="mt-8 rounded-3xl bg-gradient-to-br from-indoss-orange/10 to-indoss-aqua/10 border-2 border-indoss-orange/30 p-6 hover-glow">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="space-y-2">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-indoss-charcoal/60">
+                Maintenance Service
+              </p>
+              <h3 className="text-xl font-semibold text-indoss-charcoal">
+                Solar Panel Cleaning in Guwahati
+              </h3>
+              <p className="text-sm text-indoss-charcoal/80 max-w-2xl">
+                Professional cleaning services to maintain your solar system's efficiency.
+                Dust, pollen, and bird droppings can reduce output by up to 20%.
+                Available as one-time service or annual maintenance packages.
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="rounded-full bg-white px-3 py-1 border border-indoss-orange/30">
+                  From ₹250/kW
+                </span>
+                <span className="rounded-full bg-white px-3 py-1 border border-indoss-orange/30">
+                  Save up to 20% with annual plans
+                </span>
+                <span className="rounded-full bg-white px-3 py-1 border border-indoss-orange/30">
+                  Guwahati & nearby areas
+                </span>
+              </div>
+            </div>
+            <a
+              href="/cleaning"
+              className="inline-flex items-center justify-center rounded-full bg-indoss-orange px-6 py-2.5 text-sm font-semibold text-white shadow-soft hover:shadow-glow whitespace-nowrap"
+            >
+              View packages →
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   );

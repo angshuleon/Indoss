@@ -91,6 +91,27 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* <section className="section py-16">
+  <div className="text-center mb-10">
+    <h2 className="text-2xl font-bold text-indoss-charcoal">The Indoss Blueprint</h2>
+    <p className="text-indoss-charcoal/60">How we ensure reliability in every installation</p>
+  </div>
+  <div className="grid md:grid-cols-4 gap-8">
+    {[
+      { step: "01", title: "Site Assessment", desc: "Detailed shadow mapping and structural audit." },
+      { step: "02", title: "Digital Modeling", desc: "3D simulation of energy yield based on Assam weather." },
+      { step: "03", title: "Precision EPC", desc: "Using Tier-1 components with local-ready mounting." },
+      { step: "04", title: "Remote Monitoring", desc: "24/7 digital health checks for your system." }
+    ].map((item, i) => (
+      <div key={i} className="relative p-6 rounded-2xl bg-white border border-indoss-charcoal/5 shadow-sm">
+        <span className="text-4xl font-bold text-indoss-orange/10 absolute top-4 right-4">{item.step}</span>
+        <h4 className="font-bold text-indoss-charcoal mb-2">{item.title}</h4>
+        <p className="text-sm text-indoss-charcoal/70">{item.desc}</p>
+      </div>
+    ))}
+  </div>
+</section> */}
+
           {/* right – image / schematic card */}
           <div className="relative animate-fade-up lg:delay-150">
             <div className="gradient-border rounded-3xl p-[2px]">

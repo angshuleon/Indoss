@@ -111,6 +111,8 @@ export const links: LinksFunction = () => [
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const baseLink =
     "relative text-sm font-medium text-indoss-charcoal/75 hover:text-indoss-orange px-2 py-1";
@@ -160,14 +162,47 @@ function Navbar() {
           >
             About
           </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              `${baseLink} ${isActive ? activeStyles : ""}`
-            }
+
+          {/* Services Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
           >
-            Services
-          </NavLink>
+            <button
+              type="button"
+              className={`${baseLink} flex items-center gap-1 cursor-pointer bg-transparent border-0`}
+              onClick={() => window.location.href = '/services'}
+            >
+              Services
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {/* Invisible bridge to prevent gap */}
+            {servicesOpen && (
+              <div className="absolute top-full left-0 w-full h-1" />
+            )}
+
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-0 w-56 rounded-2xl bg-white border border-white/80 shadow-lg py-2 z-50">
+                <NavLink
+                  to="/services"
+                  className="block px-4 py-2 text-sm text-indoss-charcoal/75 hover:bg-indoss-mist hover:text-indoss-orange transition-colors"
+                >
+                  All Services
+                </NavLink>
+                <NavLink
+                  to="/cleaning"
+                  className="block px-4 py-2 text-sm text-indoss-charcoal/75 hover:bg-indoss-mist hover:text-indoss-orange transition-colors"
+                >
+                  Solar Panel Cleaning
+                </NavLink>
+              </div>
+            )}
+          </div>
+
           <NavLink
             to="/verticals"
             className={({ isActive }) =>
@@ -265,15 +300,44 @@ function Navbar() {
             >
               About
             </NavLink>
-            <NavLink
-              to="/services"
-              onClick={closeMobile}
-              className={({ isActive }) =>
-                `${baseLink} ${isActive ? activeStyles : ""}`
-              }
-            >
-              Services
-            </NavLink>
+
+            {/* Mobile Services Dropdown */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="w-full flex items-center justify-between text-sm font-medium text-indoss-charcoal/75 hover:text-indoss-orange px-2 py-1"
+              >
+                Services
+                <svg
+                  className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileServicesOpen && (
+                <div className="pl-4 py-2 space-y-2">
+                  <NavLink
+                    to="/services"
+                    onClick={closeMobile}
+                    className="block text-sm text-indoss-charcoal/70 hover:text-indoss-orange py-1"
+                  >
+                    All Services
+                  </NavLink>
+                  <NavLink
+                    to="/cleaning"
+                    onClick={closeMobile}
+                    className="block text-sm text-indoss-charcoal/70 hover:text-indoss-orange py-1"
+                  >
+                    Solar Panel Cleaning
+                  </NavLink>
+                </div>
+              )}
+            </div>
+
             <NavLink
               to="/verticals"
               onClick={closeMobile}

@@ -15,6 +15,9 @@ export default [
   // /services
   route("services", "routes/services.tsx"),
 
+  // /cleaning
+  route("cleaning", "routes/cleaning.tsx"),
+
   // /verticals
   route("verticals", "routes/verticals.tsx"),
 
